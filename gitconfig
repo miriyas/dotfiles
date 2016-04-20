@@ -1,0 +1,81 @@
+[user]
+  name = MIRiyA
+  email = miriya.lee@gmail.com
+
+[core]
+  excludesfile = /Users/miriya/.gitignore
+  editor = atom
+
+[filter "hawser"]
+  clean = git hawser clean %f
+  smudge = git hawser smudge %f
+  required = true
+
+[color]
+  status  = auto
+  branch  = auto
+  diff    = auto
+  ui      = auto
+
+[color "diff"]
+  meta  = blue bold
+  frag  = magenta bold
+  old   = red bold
+  new   = green bold
+
+[alias]
+  a   = add
+  ap  = add --patch
+  bd  = branch -d
+  bdd = branch -D
+  c   = commit -v
+  ca  = commit -v --amend
+  co  = checkout
+  cp  = cherry-pick
+  d   = diff
+  dc  = diff --cached
+  f   = fetch
+  fx  = commit --fixup
+  g   = grep -n
+  hrd = reset --hard
+  s   = status
+  b   = branch
+  co  = commit
+  f   = "!git ls-files | grep -i"
+  l   = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ls  = log --stat --oneline # show log with filediffs only
+  m   = merge
+  mm  = merge origin/master
+  p   = push
+  pf  = push --force
+  # pm  = push origin master
+  # pms = push origin master:staging
+  # pmp = push origin master:production
+  r   = rebase
+  ra  = rebase --abort
+  rc  = rebase --continue
+  ri  = rebase --interactive --autosquash
+  rom = rebase origin/master
+  rs  = rebase --skip
+  s   = status
+  sh  = !git-sh
+  sq  = commit --squash
+  st  = diff-tree --no-commit-id --name-only -r # show file tree of commit
+  sw  = show
+  undo = reset --soft HEAD^
+
+[branch "master"]
+  remote = origin
+  merge = master
+
+[core]
+  ignorecase = false
+
+[branch]
+  autosetuprebase = always
+
+[push]
+  default = simple
+
+[remote "origin"]
+  push = HEAD
